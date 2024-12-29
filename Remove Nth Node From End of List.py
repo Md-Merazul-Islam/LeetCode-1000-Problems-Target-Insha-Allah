@@ -19,3 +19,4 @@ class Solution(object):
         scnd.next = scnd.next.next
 
         return tmp.next
+
