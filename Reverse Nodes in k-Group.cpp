@@ -6,7 +6,6 @@ public:
         ListNode *prev = nullptr;
         ListNode *cur = start;
         ListNode *next = nullptr;
-
         while (cur != end)
         {
             next = cur->next;
@@ -21,11 +20,9 @@ public:
     {
         if (!head || k == 1)
             return head;
-
         ListNode dummy(0);
         dummy.next = head;
         ListNode *preveG = &dummy;
-
         while (true)
         {
             ListNode *start = preveG->next;
@@ -39,7 +36,6 @@ public:
 
             ListNode *nextS = end->next;
             ListNode *reveH = reverse(start, end->next);
-
             preveG->next = reveH;
             start->next = nextS;
             preveG = start;
